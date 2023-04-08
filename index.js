@@ -8,8 +8,6 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import { v4 as uuid} from "uuid";
 import * as path from "path";
-import { fileURLToPath } from 'url';
-
 // intializing
 
 // creating server
@@ -29,8 +27,6 @@ Connection();
 
 if (process.env.NODE_ENV === 'production') {
   
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
 
   app.use(express.static(path.join(__dirname, 'client', 'build')))
 
