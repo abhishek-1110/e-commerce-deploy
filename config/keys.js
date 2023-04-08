@@ -1,5 +1,6 @@
+import MONGO_URI from './prod'
 if (process.env.NODE_ENV === 'production') {
-    module.exports = require('./prod')
+    module.exports = MONGO_URI
 } else {
-    module.exports = require('./dev')
+    module.exports = MONGO_URI
 }
