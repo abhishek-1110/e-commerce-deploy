@@ -7,7 +7,7 @@ import router from "./routes/route.js";
 import cors from "cors";
 import bodyParser from "body-parser";
 import { v4 as uuid} from "uuid";
-import path from "path";
+import * as path from "path";
 // intializing
 
 // creating server
@@ -23,9 +23,10 @@ app.use("/", router);
 const PORT = process.env.PORT || 8000;
 
 Connection();
-let path = path;
+
 
 if (process.env.NODE_ENV === 'production') {
+  
 
   app.use(express.static(path.join(__dirname, 'client', 'build')))
 
