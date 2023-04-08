@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 import {MONGO_URI} from '../config/dev.js'
 
-export const Connection = async (username, password) => {
+export const Connection = async () => {
   const URL = MONGO_URI;
   try {
     await mongoose.connect(URL, { useUnifiedTopology: true, useNewUrlParser: true});

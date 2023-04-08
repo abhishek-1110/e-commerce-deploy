@@ -7,7 +7,7 @@ import router from "./routes/route.js";
 import cors from "cors";
 import bodyParser from "body-parser";
 import { v4 as uuid} from "uuid";
-
+import path from "path";
 // intializing
 
 // creating server
@@ -20,16 +20,13 @@ app.use(cors());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", router);
-
-const USERNAME = process.env.DB_USERNAME;
-const PASSWORD = process.env.DB_PASSWORD;
 const PORT = process.env.PORT || 8000;
 
-Connection(USERNAME, PASSWORD);
+Connection();
 
 if (process.env.NODE_ENV === 'production') {
   
-  const path = require('path')
+  const path = path
 
   app.use(express.static(path.join(__dirname, 'client', 'build')))
 
