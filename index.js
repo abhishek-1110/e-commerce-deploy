@@ -8,6 +8,9 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import { v4 as uuid} from "uuid";
 import * as path from "path";
+import url from 'url'
+
+
 // intializing
 
 // creating server
@@ -24,6 +27,8 @@ const PORT = process.env.PORT || 8000;
 
 Connection();
 
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 if (process.env.NODE_ENV === 'production') {
   
