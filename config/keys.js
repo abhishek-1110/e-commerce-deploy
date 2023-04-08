@@ -1,6 +1,1 @@
-import MONGO_URI from './prod'
-if (process.env.NODE_ENV === 'production') {
-    module.exports = MONGO_URI
-} else {
-    module.exports = MONGO_URI
-}
+export const MONGO_URI = process.env.NODE_ENV === 'production' ? "mongodb://admin:admin@ac-wavkl3r-shard-00-00.r44f1gh.mongodb.net:27017,ac-wavkl3r-shard-00-01.r44f1gh.mongodb.net:27017,ac-wavkl3r-shard-00-02.r44f1gh.mongodb.net:27017/?ssl=true&replicaSet=atlas-q386v3-shard-0&authSource=admin&retryWrites=true&w=majority" : "mongodb://admin:admin@ac-wavkl3r-shard-00-00.r44f1gh.mongodb.net:27017,ac-wavkl3r-shard-00-01.r44f1gh.mongodb.net:27017,ac-wavkl3r-shard-00-02.r44f1gh.mongodb.net:27017/?ssl=true&replicaSet=atlas-q386v3-shard-0&authSource=admin&retryWrites=true&w=majority"
