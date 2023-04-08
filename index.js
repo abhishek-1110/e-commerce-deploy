@@ -23,10 +23,9 @@ app.use("/", router);
 const PORT = process.env.PORT || 8000;
 
 Connection();
+let path = path;
 
 if (process.env.NODE_ENV === 'production') {
-  
-  const path = path
 
   app.use(express.static(path.join(__dirname, 'client', 'build')))
 
