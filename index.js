@@ -8,7 +8,6 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import { v4 as uuid} from "uuid";
 import * as path from "path";
-import url from 'url'
 import { fileURLToPath } from "url";
 
 // intializing
@@ -37,7 +36,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client', 'build')))
 
   app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+    res.sendFile(path.join(__dirname, 'dist'))
   });
 }
 
