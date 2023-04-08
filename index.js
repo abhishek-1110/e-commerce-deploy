@@ -9,7 +9,7 @@ import bodyParser from "body-parser";
 import { v4 as uuid} from "uuid";
 import * as path from "path";
 import url from 'url'
-
+import { fileURLToPath } from "url";
 
 // intializing
 
@@ -27,8 +27,7 @@ const PORT = process.env.PORT || 8000;
 
 Connection();
 
-const __filename = url.fileURLToPath(import.meta.url);
-const __dirname = path.resolve();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 console.log(__dirname);
 
