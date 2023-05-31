@@ -21,7 +21,6 @@ dotenv.config();
 app.use(cors());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use("/", router);
 const PORT = process.env.PORT || 8000;
 
 Connection();
@@ -30,15 +29,16 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 console.log(__dirname);
 
-if (process.env.NODE_ENV === 'production') {
-  
-
-  app.get('/', function (req, res) {
-    app.use(express.static(path.join(process.cwd(), 'client', 'build')))
-
-    res.sendFile(path.join(process.cwd(), 'client', 'build', 'index.html'))
+if (process.env.NODE_ENV === "production") {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, "client/build")));
+  // Handle React routing, return all requests to React app
+  app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
   });
 }
+
+app.use("/", router);
 
 app.listen(PORT, () =>
   console.log(`Server is running successfully on Port ${PORT}`)
