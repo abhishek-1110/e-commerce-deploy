@@ -1,7 +1,7 @@
 // using axios for calling api's
 import axios from "axios";
 
-const url = "http://localhost:8000";
+const url = "";
 
 export const authenticateSignup = async (user) => {
   try {
