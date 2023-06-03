@@ -29,6 +29,7 @@ Connection();
 const __dirname = path.resolve();
 
 // console.log(__dirname);
+app.use("/", router);
 
 if (process.env.NODE_ENV === "production") {
   // Serve any static files
@@ -39,7 +40,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.use("/", router);
 
 app.listen(PORT, () =>
   console.log(`Server is running successfully on Port ${PORT}`)
