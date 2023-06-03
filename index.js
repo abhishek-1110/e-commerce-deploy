@@ -25,9 +25,9 @@ const PORT = process.env.PORT || 8000;
 
 Connection();
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+// const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-console.log(__dirname);
+// console.log(__dirname);
 
 if (process.env.NODE_ENV === "production") {
   // Serve any static files
