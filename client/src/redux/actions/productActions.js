@@ -3,7 +3,7 @@
 import axios from "axios";
 
 import * as actionTypes from "../constants/productConstant";
-const URL = "";
+const URL = "e-commerce-deploy-kcyl9ycez-abhishek-1110.vercel.app";
 // middle ware dispatch
 export const getProducts = () => async (dispatch) => {
   try {
