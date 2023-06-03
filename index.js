@@ -7,8 +7,8 @@ import router from "./routes/route.js";
 import cors from "cors";
 import bodyParser from "body-parser";
 import { v4 as uuid} from "uuid";
-import * as path from "path";
 import { fileURLToPath } from "url";
+import path from 'path';
 
 // intializing
 
@@ -26,6 +26,7 @@ const PORT = process.env.PORT || 8000;
 Connection();
 
 // const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = path.resolve();
 
 // console.log(__dirname);
 
