@@ -1,1 +1,1 @@
-export const MONGO_URI = 'mongodb+srv://abhi:2n4nvrfvHdjQMhJF@inotebook.vg06nrm.mongodb.net/?retryWrites=true&w=majority';
+export const MONGO_URI = 'mongodb+srv://admin:admin@flipkart.r44f1gh.mongodb.net/?retryWrites=true&w=majority';
